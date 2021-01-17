@@ -49,7 +49,7 @@ def recong(img_file=None, image=None, debug=False):
 
     return results
 
-def grap(debug=None):
+def grab(debug=None):
     # grab fullscreen
     im = ImageGrab.grab()
 
@@ -59,7 +59,7 @@ def grap(debug=None):
     return res
 
 if __name__ == '__main__':
-    print(grap(True))
+    print(grab(True))
 
 
 
