@@ -15,5 +15,8 @@ python main.py
 ### Live results
 ![live](samples/live.jpg)
 
+### Quick demo
+https://user-images.githubusercontent.com/901975/104969981-5457cb00-5a2d-11eb-840f-c03a3ecd3599.mp4
+
 ## Welcome your contributions
 Please send us PR!
