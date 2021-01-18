@@ -1,11 +1,11 @@
 from PIL import Image
 import face_recognition
-from emo import emotion
+from emotion import emotion
 import cv2
 import numpy as np
 import pyscreenshot as ImageGrab
 
-def recong(img_file=None, image=None, debug=False):
+def recog(img_file=None, image=None, debug=False):
     # Load the jpg file into a numpy array
     if img_file:
         image = face_recognition.load_image_file(img_file)
@@ -49,17 +49,18 @@ def recong(img_file=None, image=None, debug=False):
 
     return results
 
-def grab(debug=None):
+def screen_shot(debug=None):
     # grab fullscreen
     im = ImageGrab.grab()
 
     # save image file
     #im.save("fullscreen.png")
-    res = recong(image=np.array(im), debug=debug)
+    res = recog(image=np.array(im), debug=debug)
     return res
 
 if __name__ == '__main__':
-    print(grab(True))
+    print(recog(img_file="samples/faces.jpg", debug=True))
+    print(screen_shot(debug=True))
 
 
 

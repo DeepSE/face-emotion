@@ -14,7 +14,7 @@ MAX_RESULTS = 20
 def animate(i):
     # {'angry': 0, 'disgust': 0, 'fear': 2, 'happy': 1, 'sad': 2, 'surprise': 0, 'neutral': 5}
     res = screen_shot()
-    labels  = res.keys()
+    labels  = list(res.keys())
 
     if len(all_res) >= MAX_RESULTS:
         all_res.pop(0)
@@ -31,6 +31,7 @@ def animate(i):
     print("update")
     ax1.clear()
 
+    labels[labels.index('sad')] = 'focused' # Make sad to focused
     ax1.stackplot(x, y, labels=labels)
     ax1.legend(loc='upper left')
 
